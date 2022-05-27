@@ -14,7 +14,7 @@ export const useRem = () => {
   document.addEventListener('DOMContentLoaded', () => {
     const html = document.querySelector('html')
     let fontsize = window.innerWidth / 10
-    fontsize > MAX_FONT_SIZE ? MAX_FONT_SIZE : fontsize
+    fontsize = fontsize > MAX_FONT_SIZE ? MAX_FONT_SIZE : fontsize
     html.style.fontSize = fontsize + 'px'
   })
 }
