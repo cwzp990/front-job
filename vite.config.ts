@@ -9,5 +9,13 @@ export default defineConfig({
     alias: {
       '@': join(__dirname, '/src')
     }
+  },
+  server: {
+    proxy: {
+      '/dev-api': {
+        target: 'https://imooc-front.lgdsunday.club/',
+        changeOrigin: true
+      }
+    }
   }
 })
